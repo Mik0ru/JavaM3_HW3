@@ -7,21 +7,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-
 public class VideosViewHolder extends RecyclerView.ViewHolder {
     private ImageView ivAvatar;
-    private TextView tvDesc,tvName;
+    private TextView tvNum, tvName;
     public VideosViewHolder(@NonNull View itemView) {
         super(itemView);
-        ivAvatar = itemView.findViewById(R.id.iv_contact);
-        tvDesc = itemView.findViewById(R.id.tv_desc);
+        tvNum = itemView.findViewById(R.id.tv_number);
         tvName = itemView.findViewById(R.id.tv_name);
     }
-    void onBind(Videos videos){
-        Glide.with(ivAvatar.getContext()).load(videos.getImage()).into(ivAvatar);
-        tvName.setText(videos.getName());
-        tvDesc.setText(videos.getDisc());
+    void onBind(Contacts contacts){
+        tvName.setText(contacts.getName());
+        tvNum.setText(contacts.getNum());
 
     }
 }

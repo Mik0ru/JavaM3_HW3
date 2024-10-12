@@ -11,28 +11,28 @@ import java.util.ArrayList;
 
 public class VideosAdapter extends RecyclerView.Adapter<VideosViewHolder> {
     private  LayoutInflater inflater;
-    private  ArrayList<Videos> videos;
+    private  ArrayList<Contacts> contacts;
 
-    public VideosAdapter(LayoutInflater inflater, ArrayList<Videos> videos) {
+    public VideosAdapter(LayoutInflater inflater, ArrayList<Contacts> contacts) {
         this.inflater = inflater;
-        this.videos = videos;
+        this.contacts = contacts;
     }
 
     @NonNull
     @Override
     public VideosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.item_videos, parent, false);
+        View view = inflater.inflate(R.layout.item_contacts, parent, false);
         return new VideosViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull VideosViewHolder holder, int position) {
-        Videos video = videos.get(position);
+        Contacts video = contacts.get(position);
         holder.onBind(video);
     }
 
     @Override
     public int getItemCount() {
-        return videos.size();
+        return contacts.size();
     }
 }
