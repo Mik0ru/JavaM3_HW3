@@ -9,24 +9,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class VideosAdapter extends RecyclerView.Adapter<VideosViewHolder> {
+public class ContactsAdapter extends RecyclerView.Adapter<ContactsViewHolder> {
     private  LayoutInflater inflater;
     private  ArrayList<Contacts> contacts;
 
-    public VideosAdapter(LayoutInflater inflater, ArrayList<Contacts> contacts) {
+    public ContactsAdapter(LayoutInflater inflater, ArrayList<Contacts> contacts) {
         this.inflater = inflater;
         this.contacts = contacts;
     }
 
     @NonNull
     @Override
-    public VideosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ContactsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.item_contacts, parent, false);
-        return new VideosViewHolder(view);
+        return new ContactsViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VideosViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ContactsViewHolder holder, int position) {
         Contacts video = contacts.get(position);
         holder.onBind(video);
     }

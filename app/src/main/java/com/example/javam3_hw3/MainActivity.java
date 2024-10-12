@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRV(){
         RecyclerView recyclerView = findViewById(R.id.rv_contacts);
-        VideosAdapter adapter = new VideosAdapter(this.getLayoutInflater(), contacts);
+        ContactsAdapter adapter = new ContactsAdapter(this.getLayoutInflater(), contacts);
         recyclerView.setAdapter(adapter);
     }
 }

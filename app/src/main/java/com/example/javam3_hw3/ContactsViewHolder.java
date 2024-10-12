@@ -7,10 +7,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class VideosViewHolder extends RecyclerView.ViewHolder {
+public class ContactsViewHolder extends RecyclerView.ViewHolder {
     private ImageView ivAvatar;
     private TextView tvNum, tvName;
-    public VideosViewHolder(@NonNull View itemView) {
+    public ContactsViewHolder(@NonNull View itemView) {
         super(itemView);
         tvNum = itemView.findViewById(R.id.tv_number);
         tvName = itemView.findViewById(R.id.tv_name);
