@@ -1,13 +1,13 @@
-package com.example.javam3_hw3;
+package com.example.javam3_hw3.continents_recyclerview;
 
-public class Videos {
+import com.example.javam3_hw3.cities_recyclerview.Cities;
+
+public class Continents  {
     private String name;
     private String image;
-    private String disc;
 
-    public Videos(String image,String name,String disc) {
+    public Continents(String image, String name) {
         this.image = image;
-        this.disc = disc;
         this.name = name;
     }
 
@@ -27,11 +27,4 @@ public class Videos {
         this.image = image;
     }
 
-    public String getDisc() {
-        return disc;
-    }
-
-    public void setDisc(String disc) {
-        this.disc = disc;
-    }
 }
